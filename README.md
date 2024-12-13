@@ -17,11 +17,9 @@ Welcome to my E-Commerce Backend repository. This README serves as a comprehensi
 - [Resources](#resources)
 
 
-### Production Link
-You can access the production version of the application at the following link: [Production Link](https://e-commerce-seven-umber.vercel.app/)
 ### Postman Documentation
 
-You can access the Postman documentation for the API at the following link: [Postman Documentation](https://documenter.getpostman.com/view/26200257/2sAY4rF5hx)
+You can access the Postman documentation for the API at the following link: [Postman Documentation](https://documenter.getpostman.com/view/36378729/2sAYHxoPrY)
 
 
 ## Tech Stack And Tools✨
@@ -30,18 +28,13 @@ You can access the Postman documentation for the API at the following link: [Pos
 - **`Express.js`:** A fast, unopinionated, minimalist web framework for Node.js, used for building APIs and web applications.
 - **`MongoDB`:** A NoSQL database used for storing data in a flexible, JSON-like format.
 - **`Mongoose`:** An Object Data Modeling (ODM) library for MongoDB and Node.js, used to model application data and interact with the database.
-
-- **`Redis`:** An in-memory data store used as a database and cache to improve application performance and speed up data access.
-
 - **`Vercel`:** A cloud platform for deploying web applications, offering automatic scaling, previews, and global CDN for improved performance.
 - **`Stripe`:** A payment gateway used to facilitate secure online payments between customers and Admin.
 - **`Multer`:** A middleware used to handle file uploads in Node.js applications, used to upload images and files to the server.
 - **`Cloudinary`:** A cloud-based service for managing and storing images and videos, offering APIs for uploading, compressing, and optimizing media. It enhances media processing and supports fast distribution via a Content Delivery Network (CDN).
 - **`Nodemailer`:** A module used to send emails from the application to users for account verification, order confirmation, and other events.
 
-- **`Morgan`:** An HTTP request logger middleware used to log HTTP requests and responses for debugging and monitoring.
-- **`PDFKit`:** A JavaScript library for creating PDF documents in Node.js, allowing developers to generate dynamic PDFs with customizable content and layouts.
-- **`rateLimit`:** A middleware used in web applications to limit the number of requests a user can make to an API within a specified time period, helping to prevent abuse and ensure fair usage of resources.
+
 
 
 ## Features
@@ -108,156 +101,6 @@ The API design for ecommerce follows RESTful principles, with clear and predicta
 - **Pagination and Filtering:** Supports pagination and filtering for listing resources.
 - **Search and Sorting:** Allows users to search for resources based on keywords, categories, and other criteria, enhancing resource discovery.
 - **Error Handling:** Provides informative error messages, status codes, and error responses to help clients understand and handle errors effectively.
-
-
-## Project Structure📁
-
-
-
-```plaintext
-C:.
-|   .Dockerignore
-|   .env
-|   .gitignore
-|   Dockerfile
-|   index.js
-|   invoice.pdf
-|   logo.jpg
-|   package-lock.json
-|   package.json
-|   vercel.json
-|
-+---.vercel
-|   |   project.json
-|   |   README.txt
-|   |
-|   \---cache
-\---SRC
-    |   initApp.js
-    |
-    +---DB
-    |   |   connection.js
-    |   |
-    |   \---models
-    |           brand.mode.js
-    |           cart.model.js
-    |           category.model.js
-    |           coupon.model.js
-    |           order.model.js
-    |           product.model.js
-    |           review.model.js
-    |           subcategory.model.js
-    |           user.model.js
-    |
-    +---middleware
-    |       authorization.js
-    |       clearCache.js
-    |       rateLimit.js
-    |       validation.js
-    |
-    +---modules
-    |   +---auth
-    |   |   |   auth.endpoint.js
-    |   |   |   auth.router.js
-    |   |   |   validationSchema.js
-    |   |   |
-    |   |   \---controller
-    |   |           auth.js
-    |   |
-    |   +---Brand
-    |   |   |   Brand.endPoint.js
-    |   |   |   Brand.router.js
-    |   |   |   validationSchema.js
-    |   |   |
-    |   |   \---controller
-    |   |           Brand.js
-    |   |
-    |   +---Cart
-    |   |   |   Cart.endPoint.js
-    |   |   |   Cart.router.js
-    |   |   |   validationSchema.js
-    |   |   |
-    |   |   \---controller
-    |   |           Cart.js
-    |   |
-    |   +---Category
-    |   |   |   category.endPoint.js
-    |   |   |   category.router.js
-    |   |   |   validationSchema.js
-    |   |   |
-    |   |   \---controller
-    |   |           category.js
-    |   |
-    |   +---Coupon
-    |   |   |   coupon.endPoint.js
-    |   |   |   coupon.router.js
-    |   |   |   validationSchema.js
-    |   |   |
-    |   |   \---controller
-    |   |           coupon.js
-    |   |
-    |   +---Order
-    |   |   |   order.endPoint.js
-    |   |   |   order.router.js
-    |   |   |   validationSchema.js
-    |   |   |
-    |   |   \---controller
-    |   |           order.js
-    |   |
-    |   +---Product
-    |   |   |   product.endPoint.js
-    |   |   |   product.router.js
-    |   |   |   validationSchema.js
-    |   |   |
-    |   |   \---controller
-    |   |           product.js
-    |   |
-    |   +---Review
-    |   |   |   review.endPoint.js
-    |   |   |   review.router.js
-    |   |   |   validationSchema.js
-    |   |   |
-    |   |   \---controller
-    |   |           review.js
-    |   |
-    |   +---sales.analysis
-    |   |   |   salesReport.endPoint.js
-    |   |   |   salesReport.router.js
-    |   |   |   validationSchema.js
-    |   |   |
-    |   |   \---controller
-    |   |           salesReport.js
-    |   |
-    |   +---SubCategory
-    |   |   |   subcategory.endPoint.js
-    |   |   |   subcategory.router.js
-    |   |   |   validationSchema.js
-    |   |   |
-    |   |   \---controller
-    |   |           subcategory.js
-    |   |
-    |   \---User
-    |       |   user.endPoint.js
-    |       |   user.router.js
-    |       |   validationSchema.js
-    |       |
-    |       \---controller
-    |               user.js
-    |
-    \---utils
-            ApiFeatures.js
-            cacheManager.js
-            Cloudinary.js
-            errorHandling.js
-            Generate&verifyToken.js
-            Hash&compare.js
-            Multer.js
-            payment.js
-            pdf.js
-            removeUnverifiedEmails.js
-            salesAnalysisHelpers.js
-            sendEmail.js
-```
 
 
 ## Environment Variables🌐
